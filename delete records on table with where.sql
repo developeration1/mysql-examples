@@ -1,0 +1,2 @@
+DELETE FROM abadtable
+WHERE id LIKE 3;
