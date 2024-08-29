@@ -1,6 +1,7 @@
-USE test;
-INSERT INTO areas (area_name)
+USE games;
+INSERT INTO languages (language_name)
 VALUES 
-	('Ingeniería'),
-    ('Negocios')
+	('ENG'),
+    ('ESP'),
+    ('JAP')
 ;
