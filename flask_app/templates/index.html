@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<body>
+    <h1>Registration</h1>
+    <form action="{{url_for('submit_user')}}" method="post">
+        <h2>User Information</h2>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="first_name">First name:</label><br>
+        <input type="text" id="first_name" name="first_name"><br>
+        <label for="last_name">Last name:</label><br>
+        <input type="text" id="last_name" name="last_name"><br>
+        <br>
+        <h2>Address/Billing Information</h2>
+        <label for="street">Street:</label><br>
+        <input type="text" id="street" name="street"><br>
+        <label for="building_number">Building number:</label><br>
+        <input type="number" min="0" step="1" id="building_number" name="building_number"><br>
+        <label for="zone">Zone/Colony:</label><br>
+        <input type="text" id="zone" name="zone"><br>
+        <label for="country">Country:</label><br>
+        <select name="country" id="country">
+            {{countries|safe}}
+        </select>
+        <br>
+        <label for="state">State:</label><br>
+        <select name="state" id="state">
+            {{states|safe}}
+        </select>
+        <br>
+        <label for="city">City:</label><br>
+        <select name="city" id="city">
+            {{cities|safe}}
+        </select>
+        <br>
+        <label for="zip">ZIP Code:</label><br>
+        <input type="number" step="1" min="0" max="999999" id="zip" name="zip">
+        <button type="submit">Register</button>
+    </form>
+</body>
